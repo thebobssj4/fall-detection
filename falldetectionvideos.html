@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fall Detection Patterns</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            height: 80vh;
+            padding: 20px;
+        }
+
+        .column {
+            width: 45%;
+            margin: 0 10px;
+            overflow-y: auto;
+            border: 1px solid #ccc;
+            padding: 10px;
+            height: 100%;
+        }
+
+        .left-column {
+            text-align: left;
+        }
+
+        .right-column {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%; /* Fixed width */
+            height: 0; /* Needed for padding technique */
+            padding-bottom: 50%; /* Aspect ratio 4:3 (height/width = 3/4 = 0.75) */
+        }
+
+        .video-container iframe {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Fall Detection Patterns</h1>
+
+    <div class="container">
+        <div class="column left-column">
+            <p>The following list of motion patterns are presented as described in the Fall Detection Pendant Internal Specifications (MHP8002-005).</p>
+			<h2>Real Fall Patterns</h2>
+			<h3>301 - Forward Fall</h3>
+			<p>The forward fall is typical of how someone might fall when tripping while walking in a forward direction.  It is characterized by the forward movement, a sudden loss of balance, and a sharp face-forward fall.</p>
+			
+			<h3>302 - Sideways Fall</h3>
+			<p>The sideways fall is typical of how someone might fall if they are standing still and lose their balance.    It is characterized by falling sideways and striking on your hip and landing on your side.  Possible variations include rolling to your face or backward after the fall.</p>
+			
+			<h3>303 - Straight Down Fall</h3>
+			<p>The straight down fall is typical of how someone might fall when standing or taking a step on a bad knee.  Imagine a sharp pain that accompanies a buckling.  It is characterized by a quick sudden jerk down and the collapsing to your side.</p>
+			
+			<h3>304 - Slow Fall</h3>
+			<p>The slow fall is typical of how someone might fall when falling due to a cardiac arrest, stroke, or other health anomaly.  It is characterized by a slow downward fall, possibly grabbing or clutching to furniture in the decline and then an eventual impact to side or face.</p>
+			
+			<h3>305 - Bending Down Fall</h3>
+			<p>The bending down fall is typical of how someone might fall when leaning over to tie a shore or pick up something lying on the ground.  It is characterized by a near horizontal torso (facing down) while standing or squatting, at least 5 seconds, then losing balance and falling forward.</p>
+			
+			<h3>306 – “Seizure” Fall</h3>
+			<p>The seizure fall is typical of how someone might fall when falling due to an unexpected seizure.  It is characterized by a sudden downward fall, followed by seizure movement lying on the floor for at least 10 seconds.</p>
+			
+			<h3>307 – Slip and Fall</h3>
+			<p>The slip and fall is typical of how someone might fall when falling due to stepping on a slippery surface and losing balance.  It is characterized by a quick backward fall, and possibly accompanied by the attempt of grabbing or clutching to furniture, and then an eventual impact to hips.</p>
+			
+			<h3>308 – Falling out of a chair</h3>
+			<p>The falling out of a chair is typical of how someone might fall when falling due to an off balance from getting up from a sitting position.  It is characterized by a slight tilted torso (facing down) while getting up, then losing balance and falling forward.</p>
+			
+			<h3>309 – Falling out of a bed</h3>
+			<p>The falling out of a bed is typical of how someone might fall when falling due to an off balance from a lying position.  It is characterized by a horizontal torso (facing up or sideways) while lying down, then rolling out of the bed and falling.</p>
+			
+			<s>
+			<h3>310 – Falling down the stairs</h3>
+			<p>Use a dummy or anything to simulate a person and roll it down a few stairs then a flight of stairs.</p>
+			</s>
+			
+			<h3>311 – Sliding out of a chair</h3>
+			<p>The sliding out of a chair is typical of how someone might fall when sitting in a wheel and have gradually reclined to the point that their buttocks slips first out of the chair.  It is characterized by reclining and slipping from the chair. The user should end horizontally.</p>
+			
+			<h3>312 – Restricted 301</h3>
+			<p>Repeat motion pattern 301 with a restricted pendant so that it does not dangle freely around the neck.  Tuck it inside a tight fitting shirt or restrict it with a strap.</p>
+			
+			<s>
+			<h3>313 – 18” Ramp Drop</h3>
+			<p>Slide down the ramp from an 18 inch position.</p>
+			
+			<h3>314 – Straight drop (from desk)</h3>
+			<p>Drop the pendant straight down onto short nap carpet from the height of a standard desk ~30inches.</p>
+			</s>
+
+			<h2>Non-Fall Patterns</h2>
+			<h3>201 – 10 Steps</h3>
+			<p>Pause for 2 seconds, take 10 steps, then pause.</p>
+			
+			<h3>202 - Jogging</h3>
+			<p>10 seconds of jogging, then slow down to walking.</p>
+			
+			<s>
+			<h3>203 – Walking</h3>
+			<p>Continuous walking.</p>
+			
+			<h3>204 – Laying</h3>
+			<p>Continuous laying on bed (or sofa).</p>
+
+			<h3>205 – Stairs</h3>
+			<p>Take 6 steps downstairs then 6 steps upstairs</p>
+			</s>
+			
+			<h3>206 – Horizontal movements</h3>
+			<p>horizontal movements in bed or on a mat, like trying to roll over or adjust in bed.</p>
+			
+			<s>
+			<h3>207 – Sitting on sofa</h3>
+			<p>Continuously sitting on sofa reading or watching TV.</p>
+			</s>
+			
+			<h3>208 – Movements on sofa</h3>
+			<p>Leaning over to pick up a paper or remote etc. while sitting.</p>
+
+			<h3>209 – Sitting down on kitchen chair</h3>
+			<p>Sitting down on a kitchen chair (or some hard surface without any cushion).</p>
+			
+			<h3>210 – Getting into Bed</h3>
+			<p>Climbing into bed either by sitting down hard or slowly climbing in.</p>
+
+			<h3>211 - Lying down on a sofa</h3>
+			<p>The lying down on a sofa pattern is as it sounds.  The trick is to “hop” onto the sofa – with as much force or impact as possible without exceeding a “reasonable” level that would be experienced by a normal movement pattern.</p>
+			
+			<h3>212 – Getting into a recliner</h3>
+			<p>The getting into a recliner pattern is how someone with less mobility might get into a recliner.  The movement is characterized by putting your hands on either armrest to support your weight, slowly lowering yourself to about six inches above the seat cushion, then “plopping” into the chair, followed by quickly moving to a full recline position.</p>
+			
+			<h3>213 – Bending down</h3>
+			<p>The bending down pattern is as it sounds.  The pattern is characterized by a near horizontal torso (facing down) while standing or squatting.  Imagine leaning over to tie your shoes.</p>
+			 
+			<h3>214 – The Quick up and back movement</h3>
+			<p>The quick up and back movement is characterized reclining in your chair – far beyond what is considered normal or good posture – almost supine.  Then occasionally lean forward abruptly to take a drink, and then recline quickly again.</p>
+			
+			<h3>215 – Getting in and out of sofa</h3>
+			<p>Sitting down on a sofa normally pause then stand up from a sofa normally.</p>
+			
+			<s>
+			<h3>216 – Walking with a walker</h3>
+			<p>Use a walker and do a slow walk for 15 seconds.</p>
+			
+			<h3>217 – Getting in a sofa using walker</h3>
+			<p>Use a Walker to sit down on a sofa very slowly then sit still.</p>
+			
+			<h3>218 – Getting out of a sofa using walker</h3>
+			<p>Use a Walker to get up from sofa very slowly then stand still.</p>
+			</s>
+			
+			<h3>219 – Jumping Jacks</h3>
+			<p>Continuous jumping jacks.</p>
+			
+			<h3>220 – Sit-ups</h3>
+			<p>15 seconds of sit-ups as intense as you can achieve.</p>
+			
+			<s>
+			<h3>221 – Car Seatbelt on</h3>
+			<p>Get into a car, and then buckle up the seat belt.</p>
+			
+			<h3>222 – Car Seatbelt off</h3>
+			<p>Unbuckle the seat belt, get out of a car.</p>
+			
+			<h3>223 – Removal of pants or skirts</h3>
+			<p>How are we going to tackle that one? – Maybe without videotaping.</p>
+			
+			<h3>224 – General Bumping</h3>
+			<p>Wear BC or pendant and bump it either with the edge of table or hand. (No need for all participants, CMO can just record several).</p>
+			</s>
+			
+			<h3>225 – Putting on</h3>
+			<p>Putting the BC on a belt or pants or place pendant around your neck then pause.</p>
+			
+			<h3>226 – Taking off</h3>
+			<p>Taking the BC off a belt or pants (maybe wiggle some) or removing from neck. Place it either on a hard surface or hand it over to someone.</p>
+			
+			<s>
+			<h3>227 – Unplugging</h3>
+			<p>Unplug the BC from the battery charger.</p>
+			
+			<h3>228 – General Handling</h3>
+			<p>This one would be any movement for handling the BC or pendant, such as transferring form one person to the other or picking up and looking at it via different rotations.</p>
+			</s>
+			
+			<h3>229 – Stairs (Up)</h3>
+			<p>Walk up stairs (at least 8 steps)</p>
+			
+			<h3>230 – Stairs (Down)</h3>
+			<p>Walk down stairs (at least 8 steps)</p>
+			
+			<s>
+			<h3>231- 6” Ramp Drop</h3>
+			<p>Hold the pendant 6” above a pad and let go of it.</p>
+			</s>
+			
+			<h3>232-Chair Swivel</h3>
+			<p>Sit in a swiveling chair and rotate 90° left and right twice.</p>
+			
+			<s>
+			<h3>233- Spinning Pendant</h3>
+			<p>Hold the pendant by the lanyard and wrap around 4 times, slowly pull lanyard tight and let pendant rotate until it stops.</p>
+			</s>
+
+        </div>
+        <div class="column right-column">
+            <div class="video-container"><iframe src="https://www.youtube.com/embed/9F_OQV8TpSY" frameborder="0" allowfullscreen></iframe></div><p>301 - Forward Fall </p><p></p>
+			<div class="video-container"><iframe src="https://www.youtube.com/embed/qvw5oudECfE" frameborder="0" allowfullscreen></iframe></div><p>302 - Sideways Fall</p><p></p>
+			<div class="video-container"><iframe src="https://www.youtube.com/embed/M8iVa3YNOs4" frameborder="0" allowfullscreen></iframe></div><p>303 - Straight Down Fall</p><p></p>
+			<div class="video-container"><iframe src="https://www.youtube.com/embed/0FiXWwe2LdE" frameborder="0" allowfullscreen></iframe></div><p>304 - Slow Fall </p><p></p>
+			<div class="video-container"><iframe src="https://www.youtube.com/embed/S6vAAZBvkNI" frameborder="0" allowfullscreen></iframe></div><p>305 - Bending Down Fall</p><p></p>
+			<div class="video-container"><iframe src="https://www.youtube.com/embed/R4duZeYhi4Y" frameborder="0" allowfullscreen></iframe></div><p>306 – “Seizure” Fall</p><p></p>
+			<div class="video-container"><iframe src="https://www.youtube.com/embed/97kIymvPeF0" frameborder="0" allowfullscreen></iframe></div><p>306 – “Seizure” Fall</p><p></p>
+			<div class="video-container"><iframe src="https://www.youtube.com/embed/Xck9UBJvE5o" frameborder="0" allowfullscreen></iframe></div><p>307 – Slip and Fall </p><p></p>
+			<div class="video-container"><iframe src="https://www.youtube.com/embed/EM6Ko4iKll4" frameborder="0" allowfullscreen></iframe></div><p>308 – Falling out of a chair </p><p></p>
+			<div class="video-container"><iframe src="https://www.youtube.com/embed/mFSLRmLGdtE" frameborder="0" allowfullscreen></iframe></div><p>309 – Falling out of a bed</p><p></p>
+			<div class="video-container"><iframe src="https://www.youtube.com/embed/7Fj5YVxIGZ0" frameborder="0" allowfullscreen></iframe></div><p>311 – Sliding out of a chair</p><p></p>
+			<div class="video-container"><iframe src="https://www.youtube.com/embed/AZFAAAivyGA" frameborder="0" allowfullscreen></iframe></div><p>312 – Restricted Fall</p><p></p>
+			<h2>Non-Fall Patterns</h2><p></p>
+			<div class="video-container"><iframe src="https://www.youtube.com/embed/GZBuj1TG2rY" frameborder="0" allowfullscreen></iframe></div><p>201 – 10 Steps</p><p></p>
+			<div class="video-container"><iframe src="https://www.youtube.com/embed/9wZtd_JO7Bw" frameborder="0" allowfullscreen></iframe></div><p>202 - Jogging</p><p></p>
+			<div class="video-container"><iframe src="https://www.youtube.com/embed/mpIo2zvJZrU" frameborder="0" allowfullscreen></iframe></div><p>206 – Horizontal movements</p><p></p>
+			<div class="video-container"><iframe src="https://www.youtube.com/embed/FLHSlqcuxLw" frameborder="0" allowfullscreen></iframe></div><p>208 – Movements on sofa</p><p></p>
+			<div class="video-container"><iframe src="https://www.youtube.com/embed/BtagmZDsUwg" frameborder="0" allowfullscreen></iframe></div><p>209 – Sitting down on kitchen chair</p><p></p>
+			<div class="video-container"><iframe src="https://www.youtube.com/embed/rsFGyJTnksU" frameborder="0" allowfullscreen></iframe></div><p>210 – Getting into Bed</p><p></p>
+			<div class="video-container"><iframe src="https://www.youtube.com/embed/Zzu3e4O1ey8" frameborder="0" allowfullscreen></iframe></div><p>210 – Getting into Bed</p><p></p>
+			<div class="video-container"><iframe src="https://www.youtube.com/embed/6EwNlqdEXqc" frameborder="0" allowfullscreen></iframe></div><p>211 - Lying down on a sofa</p><p></p>
+			<div class="video-container"><iframe src="https://www.youtube.com/embed/8gTzI1s9bvo" frameborder="0" allowfullscreen></iframe></div><p>212 – Getting into a recliner</p><p></p>
+			<div class="video-container"><iframe src="https://www.youtube.com/embed/6H3s0inwA20" frameborder="0" allowfullscreen></iframe></div><p>213 – Bending down</p><p></p>
+			<div class="video-container"><iframe src="https://www.youtube.com/embed/e_bPPStRodg" frameborder="0" allowfullscreen></iframe></div><p>214 – The Quick up and back movement</p><p></p>
+			<div class="video-container"><iframe src="https://www.youtube.com/embed/27jiUr90cw8" frameborder="0" allowfullscreen></iframe></div><p>215 – Getting in and out of sofa</p><p></p>
+			<div class="video-container"><iframe src="https://www.youtube.com/embed/a5KJhXwZ1NM" frameborder="0" allowfullscreen></iframe></div><p>219 – Jumping Jacks</p><p></p>
+			<div class="video-container"><iframe src="https://www.youtube.com/embed/HttyZvfkcy4" frameborder="0" allowfullscreen></iframe></div><p>220 – Sit-ups</p><p></p>
+			<div class="video-container"><iframe src="https://www.youtube.com/embed/ZO6RKGL8_fE" frameborder="0" allowfullscreen></iframe></div><p>225 – Putting on</p><p></p>
+			<div class="video-container"><iframe src="https://www.youtube.com/embed/vthQ4f78kqA" frameborder="0" allowfullscreen></iframe></div><p>226 – Taking off </p><p></p>
+			<div class="video-container"><iframe src="https://www.youtube.com/embed/pJrPSPbbYzg" frameborder="0" allowfullscreen></iframe></div><p>229 – Stairs (Up)</p><p></p>
+			<div class="video-container"><iframe src="https://www.youtube.com/embed/V7vUnPIdXIA" frameborder="0" allowfullscreen></iframe></div><p>230 – Stairs (Down)</p><p></p>
+			<div class="video-container"><iframe src="https://www.youtube.com/embed/-pd5uaj60jM" frameborder="0" allowfullscreen></iframe></div><p>232 - Chair Swivel</p><p></p>
+        </div>
+    </div>
+
+</body>
+</html>
+
+
